@@ -4,9 +4,7 @@ import {SwapiService} from '@app/shared/services/swapi/swapi.service';
 import {Observable, of, Subject} from 'rxjs';
 import {DataListInterface} from '@app/shared/interfaces/data-list.interface';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class PeopleService implements DataListInterface{
 
   list: Observable<Person[]> | null = null;

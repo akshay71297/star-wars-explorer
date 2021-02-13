@@ -11,3 +11,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .cursor-pointer {
   cursor: pointer;
 }
+
+*, ::after, ::before {
+  box-sizing: unset;
+  outline: none !important;
+}

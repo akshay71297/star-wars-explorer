@@ -33,6 +33,7 @@ import {SpinnerNoRecordComponent} from '@component/spinner-no-record/spinner-no-
     SnakeToTitlePipe,
     DetailViewComponent,
     CustomPaginatorComponent,
+    ElevationOnHoverDirective,
   ]
 })
 

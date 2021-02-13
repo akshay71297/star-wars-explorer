@@ -5,9 +5,7 @@ import {DataListInterface} from '@app/shared/interfaces/data-list.interface';
 import {Movie} from '@model/movie.model';
 import {Planet} from '@model/planet.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class PlanetsService implements DataListInterface{
 
   list: Observable<Planet[]> | null = null;

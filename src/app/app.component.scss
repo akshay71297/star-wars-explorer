@@ -38,11 +38,6 @@ mat-toolbar{
   max-width: 600px;
 }
 
-*, ::after, ::before {
-  box-sizing: unset;
-  outline: none !important;
-}
-
 button:focus {
   outline: none;
 }
