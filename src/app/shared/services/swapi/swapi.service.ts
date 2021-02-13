@@ -21,4 +21,21 @@ export class SwapiService {
     return this.http.get<any>(`${this.BASE_URL}/people/${id}/`);
   }
 
+  getMovies(url = null): Observable<any> {
+    const newUrl = url ? url : `${this.BASE_URL}/films/`;
+    return this.http.get<any>(newUrl);
+  }
+
+  getMovie(id): Observable<any> {
+    return this.http.get<any>(`${this.BASE_URL}/films/${id}/`);
+  }
+
+  getPlanets(url = null): Observable<any> {
+    const newUrl = url ? url : `${this.BASE_URL}/planets/`;
+    return this.http.get<any>(newUrl);
+  }
+
+  getPlanet(id): Observable<any> {
+    return this.http.get<any>(`${this.BASE_URL}/planets/${id}/`);
+  }
 }

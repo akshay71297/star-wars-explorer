@@ -3,4 +3,5 @@ export class Movie {
   director: string;
   producer: number;
   release_date: string;
+  url: string;
 }

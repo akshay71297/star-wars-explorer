@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'people',
     loadChildren: () => import('./people/people.module').then(m => m.PeopleModule),
   },
+  {
+    path: 'movies',
+    loadChildren: () => import('./movies/movies.module').then(m => m.MoviesModule),
+  },
 
   {path: '**', redirectTo: 'home'}
 ];

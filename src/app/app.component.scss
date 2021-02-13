@@ -40,6 +40,7 @@ mat-toolbar{
 
 *, ::after, ::before {
   box-sizing: unset;
+  outline: none !important;
 }
 
 button:focus {

@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {PeopleService} from '@app/people/services/people.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Person} from '@model/person.model';
@@ -10,8 +10,8 @@ import {Person} from '@model/person.model';
 })
 export class PeopleComponent implements OnInit, OnDestroy {
 
-  displayList = null;
-  personId = null;
+  displayList;
+  personId;
   routeSubscription;
 
   indexesToDisplay = ['height', 'mass', 'hair_color', 'eye_color', 'birth_year', 'gender'];
@@ -27,9 +27,9 @@ export class PeopleComponent implements OnInit, OnDestroy {
       this.personId = params.id ?  +params.id : null;
       this.displayList = !this.personId;
       if (this.displayList) {
-        this.peopleService.getPeople();
+        this.peopleService.getList();
       } else {
-        this.peopleService.getPersonById(this.personId);
+        this.peopleService.getElementById(this.personId);
       }
     });
   }

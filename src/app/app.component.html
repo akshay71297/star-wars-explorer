@@ -4,7 +4,7 @@
       <p style=" ">Menu</p>
     </div>
 
-    <mat-list>
+    <mat-list class="cursor-pointer">
       <mat-list-item [routerLink]="['/home']" (click)="drawer.toggle()">
         <mat-icon mat-list-icon>home</mat-icon>
         <div mat-line>Home</div>
@@ -12,7 +12,7 @@
       <mat-divider></mat-divider>
       <mat-list-item [routerLink]="['/people']" (click)="drawer.toggle()">
         <mat-icon mat-list-icon>public</mat-icon>
-        <div mat-line>people</div>
+        <div mat-line>People</div>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item [routerLink]="['/movies']" (click)="drawer.toggle()">

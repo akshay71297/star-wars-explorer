@@ -1,0 +1,14 @@
+<div class="navigator">
+  <button mat-stroked-button [disabled]="!enablePrevious"
+          (click)="clickPrevious.emit()"
+          aria-label="Previous page">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    Previous page
+  </button>
+  <button mat-stroked-button [disabled]="!enableNext"
+          (click)="clickNext.emit()"
+          aria-label="Next page">
+    Next Page
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
+</div>

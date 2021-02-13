@@ -2,19 +2,26 @@
 </ng-container>
 
 <ng-template #showList>
+
+  <app-custom-paginator
+    [enableNext]="peopleService.nextLinkChange | async"
+    [enablePrevious]="peopleService.previousLinkChange | async"
+    (clickPrevious)="peopleService.moveToPreviousPage()"
+    (clickNext)="peopleService.moveToNextPage()"
+  >
+  </app-custom-paginator>
   <app-list-of-elements
     icon="person"
     (clickOnElement)="viewPersonFromList($event)"
-    [list]="peopleService.people | async">
+    [list]="peopleService.list | async">
   </app-list-of-elements>
 </ng-template>
 
 <ng-template #showSingleElement>
-
   <app-detail-view
     icon="person"
     backLink="/people"
-    [element]="peopleService.person | async"
+    [element]="peopleService.singleElement | async"
     [proprietiesToDisplay]="indexesToDisplay">
   </app-detail-view>
 </ng-template>

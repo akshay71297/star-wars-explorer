@@ -1,0 +1,26 @@
+<ng-container *ngIf="displayList; then showList else showSingleElement" >
+</ng-container>
+
+<ng-template #showList>
+  <app-custom-paginator
+    [enableNext]="moviesService.nextLinkChange | async"
+    [enablePrevious]="moviesService.previousLinkChange | async"
+    (clickPrevious)="moviesService.moveToPreviousPage()"
+    (clickNext)="moviesService.moveToNextPage()"
+  >
+  </app-custom-paginator>
+  <app-list-of-elements
+    icon="movie"
+    (clickOnElement)="viewMovieFromList($event)"
+    [list]="moviesService.list | async">
+  </app-list-of-elements>
+</ng-template>
+
+<ng-template #showSingleElement>
+  <app-detail-view
+    icon="movie"
+    backLink="/movies"
+    [element]="moviesService.singleElement | async"
+    [proprietiesToDisplay]="indexesToDisplay">
+  </app-detail-view>
+</ng-template>
