@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from '@app/app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {RoutingModule} from '@module/routing.module';
-import {AngularMaterialModule} from '@module/angular-material.module';
+import {AppRoutingModule} from '@app/app.routing.module';
+import { PeopleComponent } from '@app/pages/people/people.component';
+import {ElevationOnHoverDirective} from '@app/directives/elevation-on-hover.directive';
+import {SharedModule} from '@app/shared-modules/shared.module';
+import {LandingComponent} from '@component/landing/landing.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PeopleComponent,
+    ElevationOnHoverDirective,
+    LandingComponent,
   ],
   imports: [
-    RoutingModule,
-    AngularMaterialModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+    AppRoutingModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

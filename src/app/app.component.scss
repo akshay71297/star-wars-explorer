@@ -1,0 +1,73 @@
+@font-face{
+  font-family:star jedi;
+  font-style:normal;
+  font-weight:400;
+  src: local('Star Jedi'), local('StarJedi-Regular'), url(../assets/fonts/jedi.woff) format('woff'),url(../assets/fonts/jedi.ttf) format('truetype')
+}
+
+mat-toolbar{
+  background: url('../assets/img.jpg');
+  color: var(--sw-yellow);
+  height: 30%;
+  background-size: cover;
+  // for fixed toolbar
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+  span {
+    margin: auto;
+    white-space: pre-wrap;
+    line-height: 1;
+    font-family: 'Star Jedi', arial, Serif;
+    font-size: 2em;
+  }
+}
+
+.route-content {
+  max-height: 70%;
+}
+
+.top-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 50%;
+  min-width: 350px;
+  max-width: 600px;
+}
+
+*, ::after, ::before {
+  box-sizing: unset;
+}
+
+button:focus {
+  outline: none;
+}
+
+li:focus {
+  outline: none;
+}
+
+mat-drawer {
+  .close-icon {
+    font-size: 3.5em;
+    margin-left: 42%;
+    color: var(--sw-black);
+    margin-top: 50px;
+  }
+}
+
+.menu-drawer-div{
+  height: 100px;
+  background: linear-gradient(var(--sw-yellow), #fff);
+  text-align: center;
+
+  p {
+    font-family: 'Star Jedi', arial, Serif;
+    font-size: 2.5em;
+    padding-top: 39px;
+    color: black;
+  }
+}

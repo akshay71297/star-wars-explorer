@@ -9,6 +9,9 @@
       "@service/*": [
         "src/app/service/*"
       ],
+      "@directive/*": [
+        "src/app/directives/*"
+      ],
       "@interface/*": [
         "src/app/interface/*"
       ],

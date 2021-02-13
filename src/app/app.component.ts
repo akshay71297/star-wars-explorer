@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {SwapiService} from '@service/swapi/swapi.service';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'star-wars-explorer';
+  defaultTitle = 'Star Wars Explorer';
+  toolbarTitle = this.defaultTitle;
+
+  constructor(router: Router) {
+    // this.swapiService.getPeople().subscribe(res => {
+    //   console.log('hell', res);
+    // });
+
+    router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const title =  this.getRouteTitle(router.routerState, router.routerState.root).join(' ');
+        this.toolbarTitle = title ? title : this.defaultTitle;
+      }
+    });
+  }
+
+  getRouteTitle(state, parent): any{
+    const data = [];
+    if (parent && parent.snapshot.data && parent.snapshot.data.toolbarTitle) {
+      data.push(parent.snapshot.data.toolbarTitle);
+    }
+
+    if (state && parent) {
+      data.push(... this.getRouteTitle(state, state.firstChild(parent)));
+    }
+    return data;
+  }
+
 }
