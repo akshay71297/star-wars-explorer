@@ -1,0 +1,20 @@
+<ng-container *ngIf="displayList; then showList else showSingleElement" >
+</ng-container>
+
+<ng-template #showList>
+  <app-list-of-elements
+    icon="person"
+    (clickOnElement)="viewPersonFromList($event)"
+    [list]="peopleService.people | async">
+  </app-list-of-elements>
+</ng-template>
+
+<ng-template #showSingleElement>
+
+  <app-detail-view
+    icon="person"
+    backLink="/people"
+    [element]="peopleService.person | async"
+    [proprietiesToDisplay]="indexesToDisplay">
+  </app-detail-view>
+</ng-template>

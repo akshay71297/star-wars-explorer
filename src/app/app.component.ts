@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {SwapiService} from '@service/swapi/swapi.service';
+import {SwapiService} from '@app/shared/services/swapi/swapi.service';
 import {NavigationEnd, Router} from '@angular/router';
 
 @Component({

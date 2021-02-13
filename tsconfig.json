@@ -7,22 +7,19 @@
         "src/app/*"
       ],
       "@service/*": [
-        "src/app/service/*"
+        "src/app/shared/service/*"
       ],
       "@directive/*": [
-        "src/app/directives/*"
+        "src/app/shared/directives/*"
       ],
-      "@interface/*": [
-        "src/app/interface/*"
+      "@model/*": [
+        "src/app/shared/models/*"
       ],
       "@env/*": [
         "src/environments/*"
       ],
       "@component/*": [
-        "src/app/components/*"
-      ],
-      "@module/*": [
-        "src/app/module/*"
+        "src/app/shared/components/*"
       ],
       "@assets/*": [
         "src/assets/*"

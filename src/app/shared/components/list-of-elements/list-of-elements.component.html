@@ -1,0 +1,10 @@
+<mat-list *ngIf="list">
+  <mat-divider></mat-divider>
+  <ng-container *ngFor="let element of list">
+    <mat-list-item class="cursor-pointer" (click)="clickOnElement.emit(element)">
+      <mat-icon mat-list-icon>{{icon}}</mat-icon>
+      <div mat-line>{{element.name ? element.name : element.title}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </ng-container>
+</mat-list>
