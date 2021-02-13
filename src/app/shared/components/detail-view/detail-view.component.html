@@ -1,23 +1,36 @@
-<a mat-stroked-button [routerLink]="[backLink]" ><mat-icon>keyboard_arrow_left</mat-icon>Back</a>
-<div class="content" *ngIf="element">
-  <mat-card class="personalDetails">
-    <mat-card-header>
-      <div mat-card-avatar><mat-icon>{{icon}}</mat-icon></div>
-      <mat-card-title>{{element.name ? element.name : element.title}}</mat-card-title>
-    </mat-card-header>
+<a mat-stroked-button [routerLink]="[backLink]" ><mat-icon>keyboard_arrow_left</mat-icon>Back to list</a>
+<ng-container *ngIf="element; then showElement else showError" >
+</ng-container>
 
-    <mat-card-content>
-      <table>
-        <tr>
-          <th>Info label:</th>
-          <th>Info value</th>
-        </tr>
-        <tr *ngFor="let prop of proprietiesToDisplay">
-          <td>{{prop | snakeToTitle | titlecase}}</td>
-          <td>{{element[prop]}}</td>
-        </tr>
-      </table>
-    </mat-card-content>
-  </mat-card>
+<ng-template #showElement>
+  <div class="content" *ngIf="element">
+    <mat-card class="personalDetails">
+      <mat-card-header>
+        <div mat-card-avatar><mat-icon>{{icon}}</mat-icon></div>
+        <mat-card-title>{{element.name ? element.name : element.title}}</mat-card-title>
+      </mat-card-header>
 
-</div>
+      <mat-card-content>
+        <table>
+          <tr>
+            <th>Info label:</th>
+            <th>Info value</th>
+          </tr>
+          <tr *ngFor="let prop of proprietiesToDisplay">
+            <td>{{prop | snakeToTitle | titlecase}}</td>
+            <td>{{element[prop]}}</td>
+          </tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-template>
+
+<ng-template #showError>
+  <br>
+  <br>
+  <app-spinner-no-record
+    message="Resource not found"
+  >
+  </app-spinner-no-record>
+</ng-template>

@@ -8,6 +8,7 @@ import {SnakeToTitlePipe} from '@directive/snake-to-title.pipe';
 import {DetailViewComponent} from '@component/detail-view/detail-view.component';
 import {RouterModule} from '@angular/router';
 import {CustomPaginatorComponent} from '@component/custom-paginator/custom-paginator.component';
+import {SpinnerNoRecordComponent} from '@component/spinner-no-record/spinner-no-record.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {CustomPaginatorComponent} from '@component/custom-paginator/custom-pagin
     SnakeToTitlePipe,
     DetailViewComponent,
     CustomPaginatorComponent,
+    SpinnerNoRecordComponent,
   ],
   imports: [
     CommonModule,
