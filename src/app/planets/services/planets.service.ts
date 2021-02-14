@@ -5,6 +5,7 @@ import {DataListInterface} from '@app/shared/interfaces/data-list.interface';
 import {Movie} from '@model/movie.model';
 import {Planet} from '@model/planet.model';
 
+// injected in planets module
 @Injectable()
 export class PlanetsService implements DataListInterface{
 

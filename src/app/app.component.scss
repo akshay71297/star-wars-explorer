@@ -6,20 +6,23 @@
 }
 
 mat-toolbar{
-  background: url('../assets/img.jpg');
+  background: url('../assets/death.png');
   color: var(--sw-yellow);
   height: 30%;
-  background-size: cover;
+  background-size: 100% 115%;
   // for fixed toolbar
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 2;
-  span {
+  p {
     margin: auto;
+    text-align: center !important;
+    text-align: -moz-center !important;
+    text-align: -webkit-center !important;
     white-space: pre-wrap;
     line-height: 1;
-    font-family: 'Star Jedi', arial, Serif;
+    font-family: 'Star Jedi', arial, serif;
     font-size: 2em;
   }
 }
@@ -57,11 +60,11 @@ mat-drawer {
 
 .menu-drawer-div{
   height: 100px;
-  background: linear-gradient(var(--sw-yellow), #fff);
+  background: linear-gradient(180deg, var(--sw-yellow), #ffff);
   text-align: center;
 
   p {
-    font-family: 'Star Jedi', arial, Serif;
+    font-family: 'Star Jedi', arial, serif;
     font-size: 2.5em;
     padding-top: 39px;
     color: black;

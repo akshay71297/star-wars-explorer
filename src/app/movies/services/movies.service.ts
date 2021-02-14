@@ -4,6 +4,7 @@ import {Observable, of} from 'rxjs';
 import {DataListInterface} from '@app/shared/interfaces/data-list.interface';
 import {Movie} from '@model/movie.model';
 
+// injected in movies module
 @Injectable()
 export class MoviesService implements DataListInterface{
 

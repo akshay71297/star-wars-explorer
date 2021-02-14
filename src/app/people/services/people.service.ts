@@ -4,6 +4,7 @@ import {SwapiService} from '@app/shared/services/swapi/swapi.service';
 import {Observable, of, Subject} from 'rxjs';
 import {DataListInterface} from '@app/shared/interfaces/data-list.interface';
 
+// injected in people module
 @Injectable()
 export class PeopleService implements DataListInterface{
 

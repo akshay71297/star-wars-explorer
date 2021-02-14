@@ -9,6 +9,7 @@ import {DetailViewComponent} from '@component/detail-view/detail-view.component'
 import {RouterModule} from '@angular/router';
 import {CustomPaginatorComponent} from '@component/custom-paginator/custom-paginator.component';
 import {SpinnerNoRecordComponent} from '@component/spinner-no-record/spinner-no-record.component';
+import {SwapiService} from '@app/shared/services/swapi/swapi.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {SpinnerNoRecordComponent} from '@component/spinner-no-record/spinner-no-
     DetailViewComponent,
     CustomPaginatorComponent,
     ElevationOnHoverDirective,
-  ]
+  ],
+  providers: [SwapiService]
 })
 
 export class SharedModule { }

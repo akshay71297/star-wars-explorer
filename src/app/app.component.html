@@ -1,7 +1,7 @@
 <mat-drawer-container class="top-container">
   <mat-drawer #drawer class="sidenav" mode="over">
     <div class="menu-drawer-div">
-      <p style=" ">Menu</p>
+      <p>Menu</p>
     </div>
 
     <mat-list class="cursor-pointer">
@@ -11,7 +11,7 @@
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item [routerLink]="['/people']" (click)="drawer.toggle()">
-        <mat-icon mat-list-icon>public</mat-icon>
+        <mat-icon mat-list-icon>people</mat-icon>
         <div mat-line>People</div>
       </mat-list-item>
       <mat-divider></mat-divider>
@@ -26,10 +26,13 @@
       </mat-list-item>
     </mat-list>
 
-    <mat-icon class="cursor-pointer close-icon"
-              (click)="drawer.toggle()">
-      cancel
-    </mat-icon>
+    <div>
+      <mat-icon class="cursor-pointer close-icon"
+                (click)="drawer.toggle()">
+        cancel
+      </mat-icon>
+    </div>
+
   </mat-drawer>
   <mat-drawer-content>
     <mat-toolbar>
@@ -38,7 +41,7 @@
               aria-label="Button to open side navigation bar">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>{{toolbarTitle}}</span>
+      <p>{{toolbarTitle}}</p>
     </mat-toolbar>
     <div class="route-content">
       <router-outlet></router-outlet>
