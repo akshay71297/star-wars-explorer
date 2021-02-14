@@ -5,11 +5,11 @@ Star Wars Explorer is an Angular web-app.
 ### Project Structure:
 - `app`
   - `movies` -> movies module [lazy loaded in app.module.ts]
-    - `services` -> containes services used only by movies module
+    - `services` -> contains services used only by movies module
   - `people` -> people module [lazy loaded in app.module.ts]
-    - `services` -> containes services used only by people module
+    - `services` -> contains services used only by people module
   - `planets` -> planets module [lazy loaded in app.module.ts]
-    - `services` -> containes services used only by planets module
+    - `services` -> contains services used only by planets module
   - `shared`
     - `components` -> components used by other (smart) components (except for landing used only by app.component)
       - `custom-paginator` -> used for navigation thru a list
@@ -18,10 +18,12 @@ Star Wars Explorer is an Angular web-app.
       - `landing` -> homepage, allows navigation to different routes
       - `list-of-elements` -> generic list displaying component
       - `spinner-no-record` -> used for displaying error message and loading
-    - `directives` -> containes a custom pipe and a custom directive
-    - `interfaces` -> containes an interface implemented by PeopleService, PlanetsService, MoviesService
-    - `models` -> containes model used to highlight the structure of objects used inside the web-app
-    - `services` -> containes a service to connect to swapi.dev server and fetch data
+    - `directives` -> contains a custom pipe and a custom directive
+    - `interfaces` -> contains an interface implemented by PeopleService, PlanetsService, MoviesService
+    - `models` -> contains model used to highlight the structure of objects used inside the web-app
+    - `services`
+      - `interceptor` -> interceptor used to make all api calls to https in case environment requests so
+      - `swapi` -> interceptor used to make all api calls to https in case environment requests so
 
 
 ### Requirements satisfied:
@@ -41,6 +43,6 @@ Star Wars Explorer is an Angular web-app.
 
 ### Extras:
 - styles to beautify
-- Karma tests for presentational components
+- Karma tests for presentational components (run `npm test`)
 - application dockerized
 - created a subdomain on AWS and deployed application @ swapi.akwares.io

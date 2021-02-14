@@ -7,7 +7,7 @@ describe('SwapiService', () => {
   let service: SwapiService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({ providers: [SwapiService, HttpClient, HttpHandler] });
+    TestBed.configureTestingModule({providers: [SwapiService, HttpClient, HttpHandler]});
     service = TestBed.inject(SwapiService);
   });
 

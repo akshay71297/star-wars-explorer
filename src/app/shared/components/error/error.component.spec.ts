@@ -1,7 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ErrorComponent } from './error.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {ErrorComponent} from './error.component';
 import {By} from '@angular/platform-browser';
-import {CommonModule} from '@angular/common';
 
 describe('ErrorComponent', () => {
   let component: ErrorComponent;
@@ -9,9 +8,9 @@ describe('ErrorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ErrorComponent ]
+      declarations: [ErrorComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -10,7 +10,8 @@ export class ErrorComponent implements OnInit {
   @Input() message = 'Nothing to see here!\n[Error Occurred]';
   @Input() subMessage = 'Move Along...\nMove Along...';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

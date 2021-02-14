@@ -5,6 +5,8 @@ import {SharedModule} from '@app/shared/shared.module';
 import {LandingComponent} from '@component/landing/landing.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {ConvertToHttpsInterceptor} from '@app/shared/services/interceptor/convert-to-https.interceptor';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ConvertToHttpsInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
