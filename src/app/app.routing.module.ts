@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
-import { LandingComponent } from '@component/landing/landing.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterModule, Routes} from '@angular/router';
+import {LandingComponent} from '@component/landing/landing.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: LandingComponent, data: {toolbarTitle: 'Star Wars Explorer'}},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: LandingComponent, data: {toolbarTitle: 'Star Wars Explorer'}},
   {
     path: 'people',
     loadChildren: () => import('./people/people.module').then(m => m.PeopleModule),
@@ -23,8 +23,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [],
-    imports: [CommonModule, RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  declarations: [],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

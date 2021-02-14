@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SpinnerNoRecordComponent } from './spinner-no-record.component';
+import {SpinnerNoRecordComponent} from './spinner-no-record.component';
 
 describe('SpinnerNoRecordComponent', () => {
   let component: SpinnerNoRecordComponent;
@@ -8,9 +8,9 @@ describe('SpinnerNoRecordComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SpinnerNoRecordComponent ]
+      declarations: [SpinnerNoRecordComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

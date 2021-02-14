@@ -1,4 +1,4 @@
-import { SnakeToTitlePipe } from './snake-to-title.pipe';
+import {SnakeToTitlePipe} from './snake-to-title.pipe';
 
 describe('SnakeToTitlePipe', () => {
   it('create an instance', () => {

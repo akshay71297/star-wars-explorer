@@ -2,12 +2,11 @@ import {Injectable} from '@angular/core';
 import {SwapiService} from '@app/shared/services/swapi/swapi.service';
 import {Observable, of} from 'rxjs';
 import {DataListInterface} from '@app/shared/interfaces/data-list.interface';
-import {Movie} from '@model/movie.model';
 import {Planet} from '@model/planet.model';
 
 // injected in planets module
 @Injectable()
-export class PlanetsService implements DataListInterface{
+export class PlanetsService implements DataListInterface {
 
   list: Observable<Planet[]> | null = null;
   nextLink = null;

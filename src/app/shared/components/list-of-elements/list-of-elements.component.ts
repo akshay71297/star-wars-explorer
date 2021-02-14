@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Person} from '@model/person.model';
 
 @Component({
@@ -13,7 +13,8 @@ export class ListOfElementsComponent implements OnInit {
 
   @Output() clickOnElement = new EventEmitter<Person>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

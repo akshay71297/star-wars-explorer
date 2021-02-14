@@ -24,7 +24,7 @@ export class PeopleComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.routeSubscription = this.route.data.subscribe(data => {
       const params = this.route.snapshot.params;
-      this.personId = params.id ?  +params.id : null;
+      this.personId = params.id ? +params.id : null;
       this.displayList = !this.personId;
       if (this.displayList) {
         this.peopleService.getList();
@@ -41,6 +41,6 @@ export class PeopleComponent implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    ( this.routeSubscription ) && this.routeSubscription.unsubscribe();
+    (this.routeSubscription) && this.routeSubscription.unsubscribe();
   }
 }

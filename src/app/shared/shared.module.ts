@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {AngularMaterialModule} from './/angular-material.module';
 import {HttpClientModule} from '@angular/common/http';
 import {ElevationOnHoverDirective} from '@directive/elevation-on-hover.directive';
@@ -39,4 +39,5 @@ import {SwapiService} from '@app/shared/services/swapi/swapi.service';
   providers: [SwapiService]
 })
 
-export class SharedModule { }
+export class SharedModule {
+}

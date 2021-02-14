@@ -1,11 +1,11 @@
-@font-face{
-  font-family:star jedi;
-  font-style:normal;
-  font-weight:400;
-  src: local('Star Jedi'), local('StarJedi-Regular'), url(../assets/fonts/jedi.woff) format('woff'),url(../assets/fonts/jedi.ttf) format('truetype')
+@font-face {
+  font-family: star jedi;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Star Jedi'), local('StarJedi-Regular'), url(../assets/fonts/jedi.woff) format('woff'), url(../assets/fonts/jedi.ttf) format('truetype')
 }
 
-mat-toolbar{
+mat-toolbar {
   background: url('../assets/death.png');
   color: var(--sw-yellow);
   height: 30%;
@@ -15,6 +15,7 @@ mat-toolbar{
   position: -webkit-sticky;
   top: 0;
   z-index: 2;
+
   p {
     margin: auto;
     text-align: center !important;
@@ -58,7 +59,7 @@ mat-drawer {
   }
 }
 
-.menu-drawer-div{
+.menu-drawer-div {
   height: 100px;
   background: linear-gradient(180deg, var(--sw-yellow), #ffff);
   text-align: center;

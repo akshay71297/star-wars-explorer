@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { AppComponent } from '@app/app.component';
+import {NgModule} from '@angular/core';
+import {AppComponent} from '@app/app.component';
 import {AppRoutingModule} from '@app/app.routing.module';
 import {SharedModule} from '@app/shared/shared.module';
 import {LandingComponent} from '@component/landing/landing.component';
@@ -20,4 +20,5 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

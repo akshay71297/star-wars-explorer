@@ -1,5 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Person} from '@model/person.model';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-detail-view',
@@ -13,7 +12,8 @@ export class DetailViewComponent implements OnInit {
   @Input() element;
   @Input() backLink;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

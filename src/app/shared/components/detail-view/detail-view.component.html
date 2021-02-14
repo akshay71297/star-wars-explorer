@@ -1,12 +1,16 @@
-<a mat-stroked-button [routerLink]="[backLink]" ><mat-icon>keyboard_arrow_left</mat-icon>Back to list</a>
-<ng-container *ngIf="element; then showElement else showError" >
+<a [routerLink]="[backLink]" mat-stroked-button>
+  <mat-icon>keyboard_arrow_left</mat-icon>
+  Back to list</a>
+<ng-container *ngIf="element; then showElement else showError">
 </ng-container>
 
 <ng-template #showElement>
-  <div class="content" *ngIf="element">
+  <div *ngIf="element" class="content">
     <mat-card class="personalDetails">
       <mat-card-header>
-        <div mat-card-avatar><mat-icon>{{icon}}</mat-icon></div>
+        <div mat-card-avatar>
+          <mat-icon>{{icon}}</mat-icon>
+        </div>
         <mat-card-title>{{element.name ? element.name : element.title}}</mat-card-title>
       </mat-card-header>
 

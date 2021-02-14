@@ -6,7 +6,7 @@ import {Movie} from '@model/movie.model';
 
 // injected in movies module
 @Injectable()
-export class MoviesService implements DataListInterface{
+export class MoviesService implements DataListInterface {
 
   list: Observable<Movie[]> | null = null;
   nextLink = null;

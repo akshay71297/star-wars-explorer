@@ -9,7 +9,8 @@ export class SpinnerNoRecordComponent implements OnInit {
 
   @Input() message;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

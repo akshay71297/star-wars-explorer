@@ -1,8 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Person} from '@model/person.model';
-import {MoviesService} from '@app/movies/services/movies.service';
-import {Movie} from '@model/movie.model';
 import {PlanetsService} from '@app/planets/services/planets.service';
 import {Planet} from '@model/planet.model';
 
@@ -27,7 +24,7 @@ export class PlanetsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.routeSubscription = this.route.data.subscribe(data => {
       const params = this.route.snapshot.params;
-      this.planetId = params.id ?  +params.id : null;
+      this.planetId = params.id ? +params.id : null;
       this.displayList = !this.planetId;
       if (this.displayList) {
         this.planetsService.getList();
@@ -44,6 +41,6 @@ export class PlanetsComponent implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    ( this.routeSubscription ) && this.routeSubscription.unsubscribe();
+    (this.routeSubscription) && this.routeSubscription.unsubscribe();
   }
 }

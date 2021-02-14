@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-custom-paginator',
@@ -13,7 +13,8 @@ export class CustomPaginatorComponent implements OnInit {
   @Output() clickPrevious = new EventEmitter();
   @Output() clickNext = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

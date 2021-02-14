@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {SwapiService} from '@app/shared/services/swapi/swapi.service';
+import {Component} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
@@ -12,26 +11,22 @@ export class AppComponent {
   toolbarTitle = this.defaultTitle;
 
   constructor(router: Router) {
-    // this.swapiService.getPeople().subscribe(res => {
-    //   console.log('hell', res);
-    // });
-
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        const title =  this.getRouteTitle(router.routerState, router.routerState.root).join(' ');
+        const title = this.getRouteTitle(router.routerState, router.routerState.root).join(' ');
         this.toolbarTitle = title ? title : this.defaultTitle;
       }
     });
   }
 
-  getRouteTitle(state, parent): any{
+  getRouteTitle(state, parent): any {
     const data = [];
     if (parent && parent.snapshot.data && parent.snapshot.data.toolbarTitle) {
       data.push(parent.snapshot.data.toolbarTitle);
     }
 
     if (state && parent) {
-      data.push(... this.getRouteTitle(state, state.firstChild(parent)));
+      data.push(...this.getRouteTitle(state, state.firstChild(parent)));
     }
     return data;
   }

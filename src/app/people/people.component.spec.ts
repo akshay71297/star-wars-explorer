@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PeopleComponent } from './people.component';
+import {PeopleComponent} from './people.component';
 
 describe('PeopleComponent', () => {
   let component: PeopleComponent;
@@ -8,9 +8,9 @@ describe('PeopleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PeopleComponent ]
+      declarations: [PeopleComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

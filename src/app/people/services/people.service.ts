@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import {Person} from '@model/person.model';
 import {SwapiService} from '@app/shared/services/swapi/swapi.service';
-import {Observable, of, Subject} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {DataListInterface} from '@app/shared/interfaces/data-list.interface';
 
 // injected in people module
 @Injectable()
-export class PeopleService implements DataListInterface{
+export class PeopleService implements DataListInterface {
 
   list: Observable<Person[]> | null = null;
   nextLink = null;

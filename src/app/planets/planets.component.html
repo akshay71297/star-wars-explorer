@@ -1,26 +1,26 @@
-<ng-container *ngIf="displayList; then showList else showSingleElement" >
+<ng-container *ngIf="displayList; then showList else showSingleElement">
 </ng-container>
 
 <ng-template #showList>
   <app-custom-paginator
+    (clickNext)="planetsService.moveToNextPage()"
+    (clickPrevious)="planetsService.moveToPreviousPage()"
     [enableNext]="planetsService.nextLinkChange | async"
     [enablePrevious]="planetsService.previousLinkChange | async"
-    (clickPrevious)="planetsService.moveToPreviousPage()"
-    (clickNext)="planetsService.moveToNextPage()"
   >
   </app-custom-paginator>
   <app-list-of-elements
-    icon="public"
     (clickOnElement)="viewPlanetFromList($event)"
-    [list]="planetsService.list | async">
+    [list]="planetsService.list | async"
+    icon="public">
   </app-list-of-elements>
 </ng-template>
 
 <ng-template #showSingleElement>
   <app-detail-view
-    icon="public"
-    backLink="/planets"
     [element]="planetsService.singleElement | async"
-    [proprietiesToDisplay]="indexesToDisplay">
+    [proprietiesToDisplay]="indexesToDisplay"
+    backLink="/planets"
+    icon="public">
   </app-detail-view>
 </ng-template>
