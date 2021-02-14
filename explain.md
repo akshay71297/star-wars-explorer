@@ -37,4 +37,10 @@ Star Wars Explorer is an Angular web-app.
 
 ✅ It has been added in both places.
 
-==Flow has not been changed, some styling has beeen applied to beautify (according to me) the application.==
+==Flow has not been changed, some styling has been applied to beautify (according to me) the application.==
+
+### Extras:
+- styles to beautify
+- Karma tests for presentational components
+- application dockerized
+- created a subdomain on AWS and deployed application @ swapi.akwares.io

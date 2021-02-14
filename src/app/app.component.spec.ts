@@ -1,5 +1,8 @@
 import {TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
+import {RouterTestingModule} from '@angular/router/testing';
+import {CommonModule} from '@angular/common';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -7,6 +10,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [RouterTestingModule, CommonModule],
     }).compileComponents();
   });
 
@@ -22,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('star-wars-explorer');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('star-wars-explorer app is running!');
-  });
 });

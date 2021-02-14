@@ -1,29 +1,39 @@
 # StarWarsExplorer
 
-looking for project overview? [click here!](https://github.com/akshay71297/star-wars-explorer/blob/master/explain.md)
+==&nbsp;Looking for project overview? [click here!](https://github.com/akshay71297/star-wars-explorer/blob/master/explain.md)&nbsp;==
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+## How to view/run this application?
 
-## Development server
+There are 3 different options to run or simply view this application running:
+##### Deployed
+You can visit [swapi.akwares.io](https://swapi.akwares.io) to use the application.
+Deployed version of this application is served on [AWS Amplify](https://aws.amazon.com/it/amplify/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##### Dockerized
+This project is developed on local machine with [Docker](https://www.docker.com) containers tecnology.
+To run this web app using docker follow these instructions:
+###### Local Requirements
+- Git >= 1.8
+- Docker >= 18.03
 
-## Code scaffolding
+###### Run
+a `run.sh` file containing building and running commands has been provided to simplify your part. :)
+```sh
+$ ./run.sh
+```
+Once the is running, you can visit http://localhost:4200 to see the app.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##### Local Machine
+You can serve this application using local versions of NodeJs and AngularCLI
 
-## Build
+###### Local Requirements
+- [NodeJs 14.x](https://nodejs.org/en/blog/release/v14.0.0/)
+- [AngularCLI](https://cli.angular.io/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```sh
+$ git clone https://github.com/akshay71297/star-wars-explorer.git
+$ cd star-wars-explorer
+$ npm install
+$ npm start
+```
+Once the code is compiled succesfully, you can visit http://localhost:4200 to see the app. 
