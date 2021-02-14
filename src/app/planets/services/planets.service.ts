@@ -12,6 +12,8 @@ export class PlanetsService implements DataListInterface {
   nextLink = null;
   previousLink = null;
 
+  loading: boolean;
+
   nextLinkChange: Observable<boolean> | null = null;
   previousLinkChange: Observable<boolean> | null = null;
 
@@ -21,23 +23,38 @@ export class PlanetsService implements DataListInterface {
   }
 
   getList(): void {
+    this.loading = true;
     this.swapiService.getPlanets().subscribe(res => {
       this.updateClassFieldsFromResult(res);
+      this.loading = false;
+    }, error => {
+      console.log(error);
+      this.loading = false;
     });
   }
 
   moveToNextPage(): void {
     if (this.nextLink) {
+      this.loading = true;
       this.swapiService.getPlanets(this.nextLink).subscribe(res => {
         this.updateClassFieldsFromResult(res);
+        this.loading = false;
+      }, error => {
+        console.log(error);
+        this.loading = false;
       });
     }
   }
 
   moveToPreviousPage(): void {
     if (this.previousLink) {
+      this.loading = true;
       this.swapiService.getPlanets(this.previousLink).subscribe(res => {
         this.updateClassFieldsFromResult(res);
+        this.loading = false;
+      }, error => {
+        console.log(error);
+        this.loading = false;
       });
     }
   }
@@ -52,8 +69,13 @@ export class PlanetsService implements DataListInterface {
   }
 
   getElementById(id): void {
+    this.loading = true;
     this.swapiService.getPlanet(id).subscribe(res => {
       this.singleElement = of(res);
+      this.loading = false;
+    }, error => {
+      console.log(error);
+      this.loading = false;
     });
   }
 

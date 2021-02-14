@@ -7,6 +7,7 @@ import {NavigationEnd, Router} from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'star-wars-explorer';
   defaultTitle = 'Star Wars Explorer';
   toolbarTitle = this.defaultTitle;
 

@@ -10,6 +10,7 @@ import {RouterModule} from '@angular/router';
 import {CustomPaginatorComponent} from '@component/custom-paginator/custom-paginator.component';
 import {SpinnerNoRecordComponent} from '@component/spinner-no-record/spinner-no-record.component';
 import {SwapiService} from '@app/shared/services/swapi/swapi.service';
+import {ErrorComponent} from '@component/error/error.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {SwapiService} from '@app/shared/services/swapi/swapi.service';
     DetailViewComponent,
     CustomPaginatorComponent,
     SpinnerNoRecordComponent,
+    ErrorComponent
   ],
   imports: [
     CommonModule,
@@ -35,6 +37,8 @@ import {SwapiService} from '@app/shared/services/swapi/swapi.service';
     DetailViewComponent,
     CustomPaginatorComponent,
     ElevationOnHoverDirective,
+    ErrorComponent,
+    SpinnerNoRecordComponent,
   ],
   providers: [SwapiService]
 })

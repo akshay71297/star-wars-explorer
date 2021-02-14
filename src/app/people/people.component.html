@@ -1,27 +1,42 @@
-<ng-container *ngIf="displayList; then showList else showSingleElement">
+<ng-container *ngIf="peopleService.loading; then showLoading else showContent">
 </ng-container>
 
-<ng-template #showList>
-
-  <app-custom-paginator
-    (clickNext)="peopleService.moveToNextPage()"
-    (clickPrevious)="peopleService.moveToPreviousPage()"
-    [enableNext]="peopleService.nextLinkChange | async"
-    [enablePrevious]="peopleService.previousLinkChange | async"
+<ng-template #showLoading>
+  <br>
+  <br>
+  <app-spinner-no-record
+    message="Loading..."
   >
-  </app-custom-paginator>
-  <app-list-of-elements
-    (clickOnElement)="viewPersonFromList($event)"
-    [list]="peopleService.list | async"
-    icon="person">
-  </app-list-of-elements>
+  </app-spinner-no-record>
 </ng-template>
 
-<ng-template #showSingleElement>
-  <app-detail-view
-    [element]="peopleService.singleElement | async"
-    [proprietiesToDisplay]="indexesToDisplay"
-    backLink="/people"
-    icon="person">
-  </app-detail-view>
+
+<ng-template #showContent>
+  <ng-container *ngIf="displayList; then showList else showSingleElement">
+  </ng-container>
+
+  <ng-template #showList>
+
+    <app-custom-paginator
+      (clickNext)="peopleService.moveToNextPage()"
+      (clickPrevious)="peopleService.moveToPreviousPage()"
+      [enableNext]="peopleService.nextLinkChange | async"
+      [enablePrevious]="peopleService.previousLinkChange | async"
+    >
+    </app-custom-paginator>
+    <app-list-of-elements
+      (clickOnElement)="viewPersonFromList($event)"
+      [list]="peopleService.list | async"
+      icon="person">
+    </app-list-of-elements>
+  </ng-template>
+
+  <ng-template #showSingleElement>
+    <app-detail-view
+      [element]="peopleService.singleElement | async"
+      [proprietiesToDisplay]="indexesToDisplay"
+      backLink="/people"
+      icon="person">
+    </app-detail-view>
+  </ng-template>
 </ng-template>

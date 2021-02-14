@@ -6,6 +6,7 @@ export interface DataListInterface {
   list: Observable<any[]> | null;
   nextLink: string;
   previousLink: string;
+  loading: boolean;
 
   singleElement: Observable<any> | null;
 

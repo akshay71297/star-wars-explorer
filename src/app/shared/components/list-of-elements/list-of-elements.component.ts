@@ -10,6 +10,7 @@ export class ListOfElementsComponent implements OnInit {
 
   @Input() icon;
   @Input() list;
+  @Input() loading;
 
   @Output() clickOnElement = new EventEmitter<Person>();
 
