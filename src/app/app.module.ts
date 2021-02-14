@@ -19,13 +19,7 @@ import {ConvertToHttpsInterceptor} from '@app/shared/services/interceptor/conver
     BrowserModule,
     BrowserAnimationsModule,
   ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ConvertToHttpsInterceptor,
-      multi: true
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
