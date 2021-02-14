@@ -13,6 +13,7 @@ Star Wars Explorer is an Angular web-app.
   - `shared`
     - `components` -> components used by other (smart) components (except for landing used only by app.component)
       - `custom-paginator` -> used for navigation thru a list
+      - `error` -> used to display errors
       - `detail-view` -> used for displaying any single detailed element (a movie, a person, a planet)
       - `landing` -> homepage, allows navigation to different routes
       - `list-of-elements` -> generic list displaying component
