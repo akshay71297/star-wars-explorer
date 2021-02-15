@@ -46,3 +46,21 @@ Star Wars Explorer is an Angular web-app.
 - Karma tests for presentational components (run `npm test`)
 - application dockerized
 - created a subdomain on AWS and deployed application @ swapi.akwares.io
+
+
+### NOTE:
+##### Context
+`swapi.dev` when offering a list of elements (lets take people), returns 2 important parameters: previous and next; these 2 are links used for pagination.
+##### Issue
+These links are not https link but http
+
+![page 1 people list](https://i.ibb.co/3MXnF85/screen-shot-2021-02-14-at-10-5.png)
+
+this causes a CORS error while using AWS SSL certified domain (like in this case).
+
+##### Current solution
+An interceptor has been created to overwrite every request's url from http to https.
+
+##### Ideal solution
+Links from swapi.dev use https protocol.
+

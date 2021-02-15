@@ -1,4 +1,4 @@
-# StarWarsExplorer
+# Star Wars Explorer ![N|Death Star](https://icons.iconarchive.com/icons/sensibleworld/starwars/24/Death-Star-icon.png)
 
 ==&nbsp;Looking for project overview? [click here!](https://github.com/akshay71297/star-wars-explorer/blob/master/explain.md)&nbsp;==
 
